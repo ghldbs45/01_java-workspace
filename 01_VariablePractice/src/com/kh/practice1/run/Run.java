@@ -7,7 +7,7 @@ public class Run {
 	public static void main(String[] args){
 	
 		VariablePractice1 a = new VariablePractice1();
-		a.variablePractice();
+		a.variablePractice3();
 		
 		
 	}
