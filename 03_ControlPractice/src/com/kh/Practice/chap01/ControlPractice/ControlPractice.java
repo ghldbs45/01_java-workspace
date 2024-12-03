@@ -100,6 +100,32 @@ public void practice4() {
 	
 }
 public void practice5() {
+
+	//스캐너 생성
+	Scanner sc = new Scanner(System.in);
+	//아이디 , 비밀번호 정하기
+	String id = "my id";
+	String pwd = "mypassword12";
+	
+	System.out.println("아이디 : ");
+	String inputid = sc.nextLine();
+	
+	System.out.println("비밀번호 : ");
+	String inputpwd = sc.nextLine();
+	
+	String result = "";
+
+	if (id.equals(inputid)) { // 아이디가 같을 경우
+		if (pwd.equals(inputpwd)) {// 비밀번호도 같을 경우
+			result = "로그인 성공";
+		} else { // 아이디는 맞았지만 비번이 틀릴경우
+			result = "비밀번호가 틀렸습니다";
+		}
+	} else {
+		result = "아이디가 틀렸습니다.";
+	}
+	
+	System.out.println(result);
 	
 	
 	
@@ -135,15 +161,20 @@ public void practice7() {
 	double ii = height*height;
 	double ee = kg/ii;
 	
-	if (ee < 18.5) {
-		System.out.println("저체중");
-	}else if (ee > 18.5 && ee < 23) {
-		System.out.println("정상체중");
-	}else if (ee > 30) {
-		System.out.println("고도 비만");
-	}
-	System.out.println("키 : " + height + "몸무게 : " + kg + "BMI : " + ee );
+	String result = "";
 	
+	if (ee < 18.5) {
+		result = "저체중";
+	}else if (ee < 23) { // 18.5는 무조건 넘어 , 근데 23은 안되는 사람
+		result = "정상";
+	}else if (ee < 25) {
+		result = "과체중";
+	}else if (ee < 30) {
+		result = "비만";
+	}else {
+		result = "고도비만";
+	}
+	System.out.println(result);
 }
 public void practice8() {
 	
@@ -154,6 +185,8 @@ public void practice8() {
 	Scanner sc1 = new Scanner(System.in);
 	System.out.println("두번째 숫자");
 	int num2 = sc1.nextInt();
+	
+	sc.nextLine(); // 버퍼에 남아있는 엔터 제거 코드 추가
 	
 	Scanner sc2 = new Scanner(System.in);
 	System.out.println("연산기호 ('+' , '-' , '*' , '/' , '%')");
@@ -195,22 +228,20 @@ public void practice9() {
 	
 	double mid1 = mid * 0.2;
 	double hwk1 = hwk * 0.3;
-	double go1 = go * 0.2;
+	double go1 = go;
 	double fin1 = fin * 0.3;
 	
 	double total = mid1 + hwk1+go1+fin1;
 	
 	if (total >= 70) {
 		System.out.println("Pass");
-	}else if (total < 70 || go1 < 30) {
+	}else if (total < 70 || go1 < 15) {
 		System.out.println("Fail");
 	}
 	
 	System.out.println("중간고사 점수 : " + mid1 + "기말고사 점수 : "+ fin1 + "과제 점수 : " + hwk1 + "출석 회수 : " + go1 + "총 점 : " + total);
 	}
-	
-	
-	
+
 
 public void practice10() {
 	

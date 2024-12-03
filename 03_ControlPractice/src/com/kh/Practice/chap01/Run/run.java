@@ -7,7 +7,7 @@ public class run {
 	public static void main(String[] args) {
 		
 		ControlPractice a = new ControlPractice();
-		a.practice10();
+		a.practice9();
 		
 		
 		
