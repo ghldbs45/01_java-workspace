@@ -242,7 +242,7 @@ public class A_For {
 				System.out.println("문자열의 길이 : " + str.length());
 				
 				for(int i=0;i<str.length();i++) {
-					System.out.println(str.charAt(i));
+					System.out.print(str.charAt(i));
 				}
 			}
 			

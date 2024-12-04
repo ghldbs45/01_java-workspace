@@ -7,10 +7,10 @@ public class LoopRun {
 
 	public static void main(String[] args) {
 		
-		//A_For a = new A_For();
-		//		a.method17();
+		A_For a = new A_For();
+				a.method10();
 		
 		B_while b = new B_while();
-				b.method5();
+			//	b.method5();
 	}
 }
