@@ -1,5 +1,7 @@
 package com.kh.array;
 
+import java.util.Scanner;
+
 public class A_Array {
 
 	//변수 : 하나의 공간에 하나의 값을 담을 수 있음
@@ -219,8 +221,134 @@ public class A_Array {
 		
 		
 		}
+	
+	public void method7() {
+		int[] arr1 = new int[] {1,2,3,4};
 		
+		int[] arr2= {1,2,3,4};
+		
+		System.out.println(arr1 == arr2); // false 
+		//각각의 변수에 담겨있는 주소값을 비교하기 때문
 	}
 	
+	public void method8() {
+		
+		//1. 크기 10짜리 정수 배열 생성
+		int[] arr = new int[10];
+				
+		//2. 반복문 활용해서 0번 인덱스 ~ 마지막 인덱스 까지 순차적으로 접근 하면서 값을 대입
+		//   매번 1~100 사이에 발생되는 랜덤값
+		for(int i=0;i<arr.length;i++) {
+			arr[i] = (int)(Math.random()*100+1);
+		}
+		//3. 반복문을 화룡해서 해당 배열의 0번 인덱스 ~ 마지막 인덱스까지 담겨있는 값 출력
+		//   arr[x] : xx 형식으로 출력
+		for(int i=0;i<arr.length;i++) {
+			System.out.println("Arr["+i+"] : " + arr[i]);
+		}
+	}
+	
+		
+	
+   public void method9() {
+	   
+	   //1.사용자에게 배열의 길이를 입력 받은 후
+	   // 해당 그 크기만큼의 문자열 배열 생성
+	   
+	   Scanner sc = new Scanner(System.in);
+	   
+	   System.out.println(" 배열의 길이 : ");
+	   int size = sc.nextInt();
+	   
+	   sc.nextLine();
+	   
+	   String[] arr = new String[size];
+	   
+	   // 2. 반복문 활용해서 매번 사용자에게 과일명을 입력 받아 
+	   //    그 값을 매 인덱스자리에 대입 ( 0번 ~ 마지막 인덱스)
+	   
+	   for (int i=0;i<arr.length;i++) {
+		   System.out.println("좋아하는 과일명 입력 : ");
+		   arr[i] = sc.nextLine();
+	   // 3. 반복문을 활용해서 0~마지막 인덱스까지 담긴 값 출력 
+		}
+	   for (int i=0; i<arr.length; i++) {
+		   System.out.println("arr ["+i+"] : "+arr[i]);
+		
+   }
+   }
+	public void method10() {
+		//사용자에게 문자열 하나 입력 받은 후
+		// 각각의 인덱스에 있는 문자들을 char 배열에 옮겨담기
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("문자열 입력 : ");
+		String str = sc.nextLine();
+		
+		System.out.print("찾고자 하는 문자 : ");
+		char ch = sc.nextLine().charAt(0);
+		
+		
+		// 2. char 배열 생성해두기
+		char[] arr = new char[str.length()];
+		
+		// 3. 반복문 활용해서 해당 문자열에서 각 인덱스별 문자를 char 배열의 각 인덱스 대입
+		/*
+		 * arr[0] = str.charAt(0);
+		 * arr[1] = str.charAt(1);
+		 * arr[2] = str.charAt(2);
+		 * 
+		 */
+		
+		for(int i=0;i<arr.length;i++) {
+			arr[i] = str.charAt(i);
+		}
+		// 4. 반복문 활용해서 해당 배열의 0~ 마지막 인덱스까지 담긴 값 출력
+		int count = 0; // 일치하는 문자가 존재할 경우 매번 1씩 증가
+		for(int i=0;i<arr.length;i++) {
+			if(ch == arr[i]) { // 일치!!
+				count++;
+			}
+			System.out.println("arr ["+i+"] : "+arr[i]);
+			
+		}
+		System.out.println("찾아진 문자 개수 : " + count);
+	}
+	
+	public void method11() {
+		
+		// 사용자에게 배열의 길이 입력 받아서 그 크기만큼의 정수 배열 생성
+		// 반복문 활용해서 0~마지막 인덱스까지 매번 1~100 사이의 랜덤값 발생시켜 대입
+		// 반복문 활용해서 0~마지막 인덱스까지 출력과 동시에
+		// 해당 그 인덱스에 담긴 값이 짝수인 값들의 총합도 같이 구하기!!
+		
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println(" 배열의 길이 : ");
+		int size = sc.nextInt();
 
+		int[] arr = new int[size];
+
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = (int) (Math.random() * 100 + 1);
+
+		}
+		int count = 0;
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] % 2 == 0) {
+				count += arr[i];
+			}
+			System.out.println("arr [" + i + "] : " + arr[i]);
+		}
+		System.out.println("짝수 개수 : " + count);
+	}
+
+	public void method12() {
+		
+		
+		
+
+	}
+}
 
