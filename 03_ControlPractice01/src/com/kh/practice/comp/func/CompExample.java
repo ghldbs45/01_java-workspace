@@ -59,6 +59,36 @@ public class CompExample {
 	
 	public void practice4() {
 		
+		Scanner sc = new Scanner(System.in);
+		
+		while(true) {
+			System.out.println("문자열 : ");
+			String str = sc.nextLine();
+			
+			System.out.println("문자 : ");
+			char ch = sc.nextLine().charAt(0);
+			
+			int count = 0;
+			for(int i=0;i<str.length();i++)  {
+				if(str.charAt(i) == ch) {
+					count++;
+				}
+			}
+			System.out.println( " 포함된 개수 : "+count);
+			System.out.println(" 더 하시겠습니까 : ");
+			char yn = sc.nextLine().charAt(0);
+			
+			if(yn == 'n' || yn == 'N') {
+				System.out.println("종료합니다");
+				break;
+			}else if(yn=='y'||yn=='Y') {
+			}else {
+				System.out.println("잘못입력하셨습니다 다시 입력하세요 :" );
+				
+			}
+		}
+	
+		
 		
 	}
 	

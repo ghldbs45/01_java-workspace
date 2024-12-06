@@ -183,43 +183,55 @@ public class LoopPractice {
 		System.out.println("시작 숫자");
 		int start = sc.nextInt();
 		
-		Scanner sc1 = new Scanner(System.in);
 		System.out.println("공 차");
 		int gong = sc.nextInt();
 		
-		
+		int result = start; // 4
+		for(int i=1;i<10;i++) {
+			System.out.print(result+" ");
+			result += gong;
+		}
 		}
 	
 	public void method12() {
 		
 		Scanner sc = new Scanner(System.in);
-		Scanner sc1 = new Scanner(System.in);
-		Scanner sc2 = new Scanner(System.in);
+
 		
-		while(true) {
-			
-			System.out.println("첫번째 정수 입력");
-			int num1 = sc.nextInt();
-			
-			System.out.println("두번째 정수 입력");
-			int num2 = sc.nextInt();
-			
-			System.out.println("연산자 입력(+ , - , * , / , %)");
-			String ch = sc.next();
-			
-			switch(ch) {
-			
-			case "+" : System.out.println(num1+num2);
-			case "-" : System.out.println(num1-num2);
-			case "/" : System.out.println(num1/num2);
-			case "%" : System.out.println(num1%num2);
-			case "*" : System.out.println(num1*num2);
-			
-			if(ch=="%" && num2==0 ) {
-				System.out.println("0으로 나눌 수 없습니다. 다시 입력해주세요");
-			}
-			
-			
+
+
+			while(true) { 
+				System.out.println("연산자 ( +, -, * ,/ ,%) : ");
+				String op = sc.nextLine();
+				
+				if(op.equals("exit")) { // 사용자가 exit를 입력한경우
+					System.out.println("프로그램을 종료합니다.");
+					break;
+				}
+				
+				System.out.println("정수 입력 : ");
+				int num1 = sc.nextInt();
+				
+				System.out.println("정수2 입력 : ");
+				int num2 = sc.nextInt();
+				
+				sc.nextLine();
+				
+				
+				if(op.equals("/") && num2 == 0 ) {
+					System.out.println("0으로 나눌 수 없습니다. 다시 입력하십시요.");
+				}else {
+					switch(op) {
+					case "+" : result = num1 + num2; break;
+					case "-" : result = num1 - num2; break;
+					case "/" : result = num1 / num2; break;
+					case "%" : result = num1 & num2; break;
+					case "*" : result = num1 * num2; break;
+					default : 
+						System.out.println(" 없는 연산자 입니다 다시 입력하세요 ");
+						continue;
+					}
+					System.out.printf("%d %s %d = %d\n",num1,op,num2,result);
 			
 			
 			

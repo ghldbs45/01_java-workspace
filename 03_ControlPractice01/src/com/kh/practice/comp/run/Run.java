@@ -11,7 +11,7 @@ public class Run {
 	public static void main (String[] args) {
 		
 		CompExample c = new CompExample();
-		//c.practice5();
+		//c.practice4();
 		
 		UpAndDown u = new UpAndDown();
 		//u.upDown();

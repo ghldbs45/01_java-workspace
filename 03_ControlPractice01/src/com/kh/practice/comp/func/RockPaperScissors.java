@@ -63,8 +63,36 @@ public class RockPaperScissors {
 			}else if(user.equals("exit"))
 				System.out.println(total + "전" + win+"승" + draw + "무" + lose + "패");
 				
-				
-				
+			    // string result = "";
+				// if(com.equals(user)) {
+			    //        result = 비김
+				// }
+				// if(com.equals("가위")) { // com 이 가위를 낸 경우
+				// switch(user){
+				// case "바위" : result = "이김 " ; break ; 
+				// case "보" : result = "짐" ; break; 
+				// }
+				// }else if(com.equals("바위)){ // com이 바위를 낸 경우
+				// switch(user){
+				// case "가위" : result = "짐 " ; break ; 
+				// case "보" : result = "이김" ; break;
+				// }
+				// }else{ // com이 보를 낸 경우
+				// switch(user){
+				// case "바위" : result = "짐 " ; break ; 
+				// case "가위" : result = "이김" ; break;
+				//  }
+				// }	
+				// System.out.println(result);
+				// System.out.println();
+				// total++;
+				// switch(result) {
+				// case "이김." : win ++ break;
+				// case "짐" : lose++; break;
+				// default : draw++; break;
+			
+			
+			
 			}
 		}
 	
