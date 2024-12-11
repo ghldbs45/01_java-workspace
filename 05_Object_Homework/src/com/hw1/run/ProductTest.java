@@ -3,6 +3,8 @@ package com.hw1.run;
 import com.hw1.model.vo.Product;
 
 public class ProductTest {
+	// 클래스 선언 구문에 작성가능한 접근제한자(public , default)
+	// default 라고  쓰는게 아니고 접근제한자를 지우면 defaultl가 되는거임
 	
 	public static void main(String[] args) {
 		

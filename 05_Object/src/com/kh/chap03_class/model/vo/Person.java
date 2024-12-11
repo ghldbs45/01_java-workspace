@@ -1,6 +1,6 @@
 package com.kh.chap03_class.model.vo;
 
-public class person {
+public class Person {
 	
 	//필드선언
 	private String id;
@@ -10,6 +10,21 @@ public class person {
 	private char gender;
 	private String phone;
 	private String email;
+	
+	public Person() {
+		
+	}
+	
+	public Person(String id,String pwd,String  name, int age , char gender , String phone , String email) {
+		this.id = id;
+		this.pwd = pwd;
+		this.name = name;
+		this.age = age;
+		this.gender = gender;
+		this.phone = phone;
+		this.email = email;
+		
+	}
 	
   // setter 7개
 	public void setId(String id) {
@@ -53,4 +68,13 @@ public class person {
 	public String getEmail() {
 		return email;
 	}
+	public String information() {
+		return "userId : " + id + ", userPwd : " + pwd + ", userName : " 
+				+ name + ", age : "+ age +", gender : "+gender+"Phone : "+phone
+				+"email : "+email;
+	
+	
 }
+}
+
+

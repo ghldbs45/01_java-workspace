@@ -24,7 +24,7 @@ public class A_Variable {
 			
 			//월급 = 시급 * 근무시간 *  근무일수
 			
-			//주몽 : $000를 받는다.
+			//주몽 : $000를 받는다. 
 			System.out.println("주몽:"+ ""
 					+ "$"+ (7.25 * 6 * 8));
 			System.out.println("고두막" + "$"+ (7.25 *6 *8));

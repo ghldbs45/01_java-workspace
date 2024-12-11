@@ -2,14 +2,15 @@ package com.kh.chap03_class.run;
 
 import java.util.Scanner;
 
+import com.kh.chap03_class.model.vo.Person;
 import com.kh.chap03_class.model.vo.Product;
-import com.kh.chap03_class.model.vo.person;
+
 
 public class ClassRun {
 	
 	public static void main(String[] args) {
 		
-		person p = new person();
+		Person p = new Person();
 		
 		System.out.println(p.getId()); // null 로 초기화됨 (아무것도 참조하고 있지 않다.)
 		System.out.println(p.getAge()); // 0으로 초기화됨 (초기값 0 [double은 0.0])
@@ -105,10 +106,9 @@ public class ClassRun {
 		
 		
 		
+		Person p10 = new Person("cha","pwd01","차은우",20,'M',"010-0000-0000","ghldbs45@naver.com");
 		
-		
-		
-		
+		System.out.println(p10.information());
 		
 	}
 

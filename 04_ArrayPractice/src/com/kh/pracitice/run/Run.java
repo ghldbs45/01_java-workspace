@@ -7,7 +7,7 @@ public class Run {
 	public static void main (String[] args) {
 		
 		Arraypractice a = new Arraypractice();
-		a.practice10() ;
+		a.practice16() ;
 	}
 
 }
