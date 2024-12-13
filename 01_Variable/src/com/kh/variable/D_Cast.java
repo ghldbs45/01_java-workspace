@@ -106,7 +106,7 @@ public class D_Cast {
 			// 실수 값을 정수형으로 강제형변환시 소수점 아래 부분은 버려짐(*데이터 손실 발생할 수 있다)
 			double iSum3 = iNum + dNum ; 
 			System.out.println("iSum3:"+iSum3);
-			
+			           
 			// ** 데이터 손실 테스트 **
 			int iNum2 = 290;
 			byte bNum2 = (byte)iNum2;

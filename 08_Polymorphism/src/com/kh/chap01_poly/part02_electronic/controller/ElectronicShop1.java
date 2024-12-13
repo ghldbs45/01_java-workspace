@@ -16,22 +16,27 @@ public class ElectronicShop1 {
 	private Tablet tab; // 아직은 객체 생성은 안되고 텅 비어있음
 	                    // (자리만 생성되었음)
 	
-	public void insert(Desktop d) { // Desktop d = new Desktop("samsung", "데땁", 1200000, "gtx-1070")
-		desk = d;					
+	//반환값을 모르겠으면 일단 void로 짜자
+	// public void insert (자료형 변수명){}
+	public void insert(Desktop d) {
+		desk = d;
+	//내가 넘겨받은 데스크탑 객체를 파란필드인 desk에 넣겠다
 	}
-	
-	public void insert(NoteBook n) { //NoteBook n = new NoteBook("LG", "그램", 2000000, 4)
+	public void insert(NoteBook n) {
 		note = n;
+	//내가 넘겨받은 노트북 객페를 파란필드인 note에 넣겠다
 	}
-	
-	public void insert(Tablet t) { // Tablet t = "Apple", "아이패드", 800000, false)
+	public void insert(Tablet t) {
 		tab = t;
+	//내가 넘겨받은 태블릿 객체를 파란필드인 tab에 넣겠다
+	//동일한 클래스에 동일한 메소드명으로 여러개 만듦 > 오버로딩
+		// 단 , 매개변수 종류가 달라야함
+		
+		
+	// 조회
+	// 반환형 모르겠으면 일단 void 드가자
+	
 	}
-	
-	// 동일한 클래스에 동일한 메소드명으로 여러개 만들어져 있는 것
-	// >>> 오버로딩 
-	// 단 , 매개변수 종류가 달라야 가능합니데이
-	
 	public Desktop selectDesktop() {
 		return desk;
 	}
@@ -41,6 +46,13 @@ public class ElectronicShop1 {
 	public Tablet selectTablet() {
 		return tab;
 	}
+	
+	//insert 처럼 select도 같은 이름으로 하면 안되는 이유는?
+	//매개변수가 없기 때문에 불가능함. > 오류남
+	
+	// 다형성 적용 전 
+	// 메소드 6개
+	// 다형성 적용하면 메소드가 2개 ~ 3개로 줄이기 가능함
 	
 
 }
