@@ -13,32 +13,30 @@ public class BookController {
 	// private 접근제한자로 크기 5의 Book 객체 배열 생성
 	// 각각의 인덱스에 접근하여 샘플 데이터 넣어서 객체 생성
 	
-	Date date1 = new Date(2023 - 1900, 06 -1, 14);
-	Date date2 = new Date(2023 - 1900, 05 -1, 11);
-	Date date3 = new Date(2020 - 1900, 04 -1, 25);
-	Date date4 = new Date(2015 - 1900, 01 -1, 01);
-	Date date5 = new Date(2022 - 1900, 12 -1, 25);
+	
 
 	
 	private Book[] bkArr = new Book[6];
 	{
-	bkArr[0]=new Book("자바의정석","차은우","나무",date1 ,10000);
-	bkArr[1]=new Book("여러분 파이팅","차은우","사과",date2,20000);
-	bkArr[2]=new Book("문동은","차은우","오렌지",date3,35000);
-	bkArr[3]=new Book("장원영","차은우","키위",date4,70000);
-	bkArr[4]=new Book("시연썜","차은우","바나나",date5,80000);
-	bkArr[5]=new Book(null, null, null, date1, 0);
+	bkArr[0]=new Book("자바의정석","차은우","나무",new Date(2023-1900 , 6-1 , 14) ,10000);
+	bkArr[1]=new Book("여러분 파이팅","차은우","사과",new Date(2023-1900,5-1,11),20000);
+	bkArr[2]=new Book("문동은","차은우","오렌지",new Date(2020-1900,04-1	,25),35000);
+	bkArr[3]=new Book("장원영","차은우","키위",new Date(2015-1900,1-1,01),70000);
+	bkArr[4]=new Book("시연썜","차은우","바나나",new Date(2022-1900,12-1,25),80000);
+	bkArr[5]=new Book(null, null, null, new Date(), 0);
 	}
 	
 	public void printAll() {
 
 		for (int i = 0; i < bkArr.length; i++) {
+			if(bkArr[i] != null) {
 			System.out.println(bkArr[i].toString());
-		}
+		}}
 
 		for (Book a : bkArr) {
 			System.out.println(a.toString());
 		}
+		
 	}
 
 			
@@ -54,7 +52,7 @@ public class BookController {
 				int year= Integer.parseInt(stn.nextToken());
 				int month = Integer.parseInt(stn.nextToken());
 				int day = Integer.parseInt(stn.nextToken());
-				Date nDate = new Date(year, month, day);
+				Date nDate = new Date(year-1900, month-1, day);
 				
 				// 2) split 메소드를 이용한 방법
 				
@@ -83,9 +81,8 @@ public class BookController {
 				bkArr[bkArr.length-1] = new Book(newTitle, newAuthor, newPublisher, nDate, price);
 			
 	}
-			
-			
 	
+
 	public void searchBook(String searchTitle) {
 		// 도서 리스트를 전체적으로 조회하면서 (for문 이용)
 		
@@ -93,8 +90,9 @@ public class BookController {
 		
 		// 1) for loop문 방법
 		for(int i = 0 ; i <  bkArr.length; i++) {
-			if(String.valueOf(bkArr[i]).contains(searchTitle))
-				System.out.println(bkArr[i]);;
+			if(bkArr[i].getTitle().contains(searchTitle)) {
+				System.out.println(bkArr[i]);
+			}
 		}
 		
 		// 2) for each문 방법 (향상된 for문)

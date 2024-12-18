@@ -65,11 +65,12 @@ public class Book {
 	
 	@Override
 	public String toString() {
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy년 MM월 dd일 hh시 mm분 ss초");
 		
-		String strPublishDate = sdf.format(publishDate); 
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy년 MM월 dd일");
 		
-		return "Book [Title = " + title +", author=" + author + ", publisher=" + publisher +", publishDate=" + strPublishDate + ", price=" + price;
+		String str = sdf.format(publishDate); 
+		
+		return "Book [Title = " + title +", author=" + author + ", publisher=" + publisher +", publishDate=" + str + ", price=" + price;
 		// 출판일(Date publishDate) 형식을 SimpleDateFormat을 이용하여 "0000 년 00월 00일" 형태의 문자열 형식으로 만들어 하단의 주석에 반영시키시오
 		
 	}
